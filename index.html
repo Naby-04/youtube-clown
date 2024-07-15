@@ -10,7 +10,7 @@
     <!----------------------------------------- header starts here ----------------------------------------->
     <header>
       <div class="logo-container">
-        <img src="icons/bx-menu.png" alt="menu" />
+        <img src="icons/bx-menu.png" alt="menu" id="btn" />
         <div class="logo">
           <img
             src="icons/bxl-youtube.png"
@@ -35,29 +35,135 @@
       </div>
       <div class="profil-container">
         <img src="icons/bx-arrow-from-bottom.png" alt="" />
-        <img src="icons/bx-bell.png" alt="" />
-        <img src="images/profil.jpg" alt="" class="profil" />
+        <img src="icons/bx-bell.png" alt="bell" />
+        <img src="images/profil.jpg" alt="user-img" class="profil" />
       </div>
     </header>
     <!----------------------------------------- main section starts here ----------------------------------------->
-    <main>
-      <aside>
+    <div class="mid-section">
+      <aside class="sidebar">
+        <!------------------------------ top part ------------------------------>
         <div class="top">
-          <div class="pair">
-            <div class="pair-img">
-              <img src="icons/home.png" alt="" />
-              <img src="icons/shorts.png" alt="" />
-              <img src="icons/abonnements.png" alt="" />
-            </div>
-            <div class="pair-text">
-              <p>Accueil</p>
-              <p>Shorts</p>
-              <p>Abonnements</p>
-            </div>
+          <div class="pair accueil" id="test">
+            <img src="icons/home.png" alt="" />
+            <p class="delete">Accueil</p>
+          </div>
+          <div class="pair" id="test">
+            <img src="icons/shorts.png" alt="" />
+            <p class="delete">Shorts</p>
+          </div>
+          <div class="pair" id="test">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Abonnements</p>
           </div>
           <hr />
         </div>
+        <!------------------------------ for you part ------------------------------>
+        <div class="for-you">
+          <h2>Vous</h2>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Votre chaîne</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Historique</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Playlists</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Vos vidéos</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">À regarder plus tard</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Vidéos "J'aime"</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Téléchargements</p>
+          </div>
+          <hr />
+        </div>
+        <!------------------------------ abonnement part ------------------------------>
+        <div class="abonnements">
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Votre chaîne</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Historique</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Playlists</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Vos vidéos</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">À regarder plus tard</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Vidéos "J'aime"</p>
+          </div>
+          <div class="pair">
+            <img src="icons/abonnements.png" alt="" />
+            <p class="delete">Téléchargements</p>
+          </div>
+          <h2>&nbsp;&nbsp;Plus</h2>
+          <hr />
+        </div>
+        <div class="infos">
+          <div class="first-infos">
+            <div>
+              <span>About</span>
+              <span>Press</span>
+              <span>Copyright</span>
+            </div>
+            <div>
+              <span>Contact us</span>
+              <span>Creators</span>
+            </div>
+            <div>
+              <span>advertise</span>
+              <span>developers</span>
+            </div>
+          </div>
+          <div class="second-infos">
+            <div>
+              <span>Terms</span>
+              <span>Privacy</span>
+              <span>policy & safety</span>
+            </div>
+            <div>
+              <span>How Youtube works</span>
+            </div>
+            <div>
+              <span>Test new features</span>
+            </div>
+          </div>
+        </div>
       </aside>
-    </main>
+      <main>hello world</main>
+    </div>
   </body>
+  <script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+
+    btn.onclick = function () {
+      sidebar.classList.toggle("active");
+    };
+  </script>
 </html>

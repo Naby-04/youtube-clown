@@ -2,7 +2,15 @@
   margin: 0;
   padding: 0;
   outline: none;
+  /* border: 1px solid red; */
 }
+body {
+  color: #fff;
+}
+.mid-section {
+  display: flex;
+}
+
 /*------------------------------------ header part ------------------------------------*/
 
 header {
@@ -14,7 +22,7 @@ header {
 }
 header img {
   cursor: pointer;
-  height: 25px;
+  height: 20px;
 }
 /*-------------------- logo container elements --------------------*/
 
@@ -41,14 +49,12 @@ header img {
 }
 /*-------------------- search bar elements --------------------*/
 
-.search-container img {
-  height: 30px;
-  width: 30px;
-}
 .search-bar {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 40%;
+  margin: 0px 10px;
 }
 .search-container {
   display: flex;
@@ -57,12 +63,10 @@ header img {
   border: 1px solid #3d3d3d;
   border-radius: 20px;
   padding: 5px;
-  width: 500px;
+  width: 100%;
 }
 .search-container img:nth-last-child(1) {
   padding: 0px 10px;
-  height: 30px;
-  width: 30px;
 }
 .search-bar input {
   background: transparent;
@@ -92,6 +96,112 @@ header img {
 
 /*------------------------------------ main part ------------------------------------*/
 
+main {
+  background: #0f0f0f;
+  width: 100%;
+  padding: 10px 10px;
+}
+aside.active {
+  width: 250px;
+}
+
+/*------------------------------------ main part ------------------------------------*/
+/*-------------------- sidebar elements --------------------*/
+/*---------------- top elements ----------------*/
+
+aside img {
+  width: 20px;
+}
+aside {
+  background: #0f0f0f;
+  width: 17%;
+  height: 565px;
+  transition: all 0.5s ease;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.top {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pair {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+.accueil,
+.pair:hover {
+  background: #3d3d3d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.top .pair:nth-child(1) p {
+  margin-left: 15px;
+}
+.top .pair:nth-child(2) p {
+  margin-left: 10px;
+}
+/*---------------- for you elements ----------------*/
+.for-you {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.for-you h2::after {
+  content: url(icons/bxs-chevron-right.png);
+}
+.for-you h2 {
+  padding: 10px 0px;
+  height: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/*---------------- abonnements elements ----------------*/
+
+.abonnements {
+  padding: 10px 10px;
+}
+.abonnements h2::before {
+  content: url(icons/bxs-chevron-down.png);
+}
+.abonnements h2 {
+  padding: 10px 0px;
+  height: 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/*---------------- infos elements ----------------*/
+
+.infos {
+  font-size: 12px;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/*--------------------- animation toggle ---------------------*/
+.sidebar.active {
+  width: 60px;
+  /* background: yellow; */
+}
+.sidebar.active .delete,
+.sidebar.active .infos,
+.sidebar.active h2 {
+  display: none;
+}
+/* .sidebar.active main{
+    width: 250%;
+} */
+/*--------------------- fin animation toggle ---------------------*/
 /*------------------------------------ footer part ------------------------------------*/
 
 /*------------------------------------ responsivite part ------------------------------------*/
