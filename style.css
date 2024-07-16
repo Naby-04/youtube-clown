@@ -2,13 +2,22 @@
   margin: 0;
   padding: 0;
   outline: none;
+  list-style: none;
+  text-decoration: none;
   /* border: 1px solid red; */
 }
 body {
   color: #fff;
+  background: #0f0f0f;
 }
 .mid-section {
   display: flex;
+  width: 100%;
+}
+h3 {
+  font-size: 12px;
+  margin-left: 15px;
+  margin-bottom: 10px;
 }
 
 /*------------------------------------ header part ------------------------------------*/
@@ -94,19 +103,16 @@ header img {
   gap: 10px;
 }
 
-/*------------------------------------ main part ------------------------------------*/
+/*------------------------------------ aside part ------------------------------------*/
 
-main {
-  background: #0f0f0f;
-  width: 100%;
-  padding: 10px 10px;
-}
 aside.active {
   width: 250px;
 }
 
-/*------------------------------------ main part ------------------------------------*/
 /*-------------------- sidebar elements --------------------*/
+.sidebar {
+  transition: all 0.5s ease-in-out;
+}
 /*---------------- top elements ----------------*/
 
 aside img {
@@ -114,7 +120,7 @@ aside img {
 }
 aside {
   background: #0f0f0f;
-  width: 17%;
+  width: 14%;
   height: 565px;
   transition: all 0.5s ease;
   overflow: scroll;
@@ -132,6 +138,7 @@ aside {
   gap: 5px;
   font-size: 12px;
   padding: 5px 10px;
+  width: 90%;
 }
 .accueil,
 .pair:hover {
@@ -188,19 +195,115 @@ aside {
   flex-direction: column;
   gap: 20px;
 }
+
 /*--------------------- animation toggle ---------------------*/
+
 .sidebar.active {
-  width: 60px;
-  /* background: yellow; */
+  width: 90px;
+  overflow: hidden;
 }
-.sidebar.active .delete,
+.sidebar.active .pair .delete,
 .sidebar.active .infos,
-.sidebar.active h2 {
+.sidebar.active h2,
+.sidebar.active .abonnements,
+.sidebar.active .for-you .pair:nth-child(3),
+.sidebar.active .for-you .pair:nth-child(4),
+.sidebar.active .for-you .pair:nth-child(5),
+.sidebar.active .for-you .pair:nth-child(6),
+.sidebar.active .for-you .pair:nth-child(7),
+.sidebar.active hr {
   display: none;
 }
-/* .sidebar.active main{
-    width: 250%;
-} */
+.sidebar.active .pair {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 7px;
+}
+.sidebar.active .pair p {
+  margin: 0;
+}
+
+/*------------------------------------ main part ------------------------------------*/
+
+main {
+  background: #0f0f0f;
+  width: calc(100% - 200px);
+  position: fixed;
+  right: 0;
+}
+.sidebar.active .contenue {
+  width: 10px;
+}
+.contenue {
+  /* padding: 10px 10px; */
+  height: 85vh;
+  margin-top: 10px;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 230px);
+  justify-content: center;
+  gap: 30px;
+}
+.navbar ul {
+  overflow-x: auto;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.contenue::-webkit-scrollbar,
+.navbar ul::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar {
+  display: none; /* Cache la scrollbar dans les navigateurs Webkit */
+}
+.navbar ul li:nth-child(1) a {
+  background: #e8e8e8;
+  color: #0f0f0f;
+}
+.navbar ul a {
+  padding: 5px;
+  background: #3f3f3f;
+  border-radius: 5px;
+  color: #e8e8e8;
+  transition: all 0.3s ease;
+}
+.navbar ul a:hover {
+  background: #212121;
+}
+
+/*--------------------- contenue section ---------------------*/
+
+.vid-card {
+  width: 250px;
+  cursor: pointer;
+  object-fit: cover;
+}
+.vid-card > img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  gap: 2px;
+}
+.contenue-text p:nth-child(3) {
+  font-size: 10px;
+}
+.details img:nth-child(3) {
+  width: 20px;
+  height: 20px;
+}
+.profil-user {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
 /*--------------------- fin animation toggle ---------------------*/
 /*------------------------------------ footer part ------------------------------------*/
 
