@@ -120,11 +120,12 @@ aside img {
 }
 aside {
   background: #0f0f0f;
-  width: 14%;
-  height: 565px;
+  width: 200px;
+  height: 87vh;
   transition: all 0.5s ease;
   overflow: scroll;
   overflow-x: hidden;
+  float: left;
 }
 .top {
   padding: 10px 10px;
@@ -185,6 +186,12 @@ aside {
   display: flex;
   align-items: center;
 }
+.abonnements .pair img {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
 
 /*---------------- infos elements ----------------*/
 
@@ -229,15 +236,14 @@ aside {
 main {
   background: #0f0f0f;
   width: calc(100% - 200px);
-  position: fixed;
-  right: 0;
+  margin-left: 200px;
 }
 .sidebar.active .contenue {
   width: 10px;
 }
 .contenue {
-  /* padding: 10px 10px; */
-  height: 85vh;
+  height: 81vh;
+  padding: 0px 10px;
   margin-top: 10px;
   overflow-y: scroll;
   display: grid;
@@ -262,13 +268,13 @@ main {
 }
 .navbar ul a {
   padding: 5px;
-  background: #3f3f3f;
+  background: #212121;
   border-radius: 5px;
   color: #e8e8e8;
   transition: all 0.3s ease;
 }
 .navbar ul a:hover {
-  background: #212121;
+  background: #3d3d3d;
 }
 
 /*--------------------- contenue section ---------------------*/
@@ -307,4 +313,86 @@ main {
 /*--------------------- fin animation toggle ---------------------*/
 /*------------------------------------ footer part ------------------------------------*/
 
+footer {
+  display: none;
+}
 /*------------------------------------ responsivite part ------------------------------------*/
+@media screen and (max-width: 600px) {
+  header {
+    padding: 20px 10px;
+  }
+  .profil-container img:nth-child(1),
+  .profil-container img:nth-child(3) {
+    display: none;
+  }
+  #btn {
+    display: none;
+  }
+  .search-bar {
+    display: none;
+  }
+  main {
+    width: 100%;
+    margin: 0;
+  }
+  .navbar {
+    padding: 10px 0px;
+  }
+  aside {
+    display: none;
+  }
+  .contenue {
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 90px;
+  }
+  .details {
+    font-size: 16px;
+    justify-content: space-around;
+  }
+  .vid-card {
+    width: 370px;
+  }
+  footer {
+    border-top: 1px solid #e8e8e8;
+    background: #000;
+    width: 95%;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    padding: 10px 10px;
+  }
+  footer > div:nth-child(4) {
+    position: relative;
+  }
+  footer > div:nth-child(4) span::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+  }
+  footer > div {
+    width: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 210px) {
+  .aside {
+    display: none;
+  }
+}
