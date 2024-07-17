@@ -385,6 +385,9 @@ footer {
   .vid-card {
     width: 370px;
   }
+  .vid-card > img {
+    height: 200px;
+  }
   footer img {
     cursor: pointer;
   }
