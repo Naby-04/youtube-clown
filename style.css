@@ -4,6 +4,7 @@
   outline: none;
   list-style: none;
   text-decoration: none;
+  font-family: sans-serif;
   /* border: 1px solid red; */
 }
 body {
@@ -18,6 +19,9 @@ h3 {
   font-size: 12px;
   margin-left: 15px;
   margin-bottom: 10px;
+}
+.search {
+  display: none;
 }
 
 /*------------------------------------ header part ------------------------------------*/
@@ -126,6 +130,7 @@ aside {
   overflow: scroll;
   overflow-x: hidden;
   float: left;
+  font-size: 10px;
 }
 .top {
   padding: 10px 10px;
@@ -136,8 +141,7 @@ aside {
 .pair {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 12px;
+  gap: 20px;
   padding: 5px 10px;
   width: 90%;
 }
@@ -147,26 +151,27 @@ aside {
   border-radius: 5px;
   cursor: pointer;
 }
-.top .pair:nth-child(1) p {
-  margin-left: 15px;
-}
-.top .pair:nth-child(2) p {
-  margin-left: 10px;
-}
+
 /*---------------- for you elements ----------------*/
+
 .for-you {
   padding: 10px 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.for-you h2::after {
-  content: url(icons/bxs-chevron-right.png);
+.for-you .link h2 {
+  font-size: 14px;
+  width: 25px;
+}
+.for-you .link {
+  display: flex;
+  align-items: center;
 }
 .for-you h2 {
-  padding: 10px 0px;
+  padding: 10px 15px;
   height: 10px;
-  font-size: 16px;
+  font-size: 10px;
   display: flex;
   align-items: center;
 }
@@ -176,13 +181,9 @@ aside {
 .abonnements {
   padding: 10px 10px;
 }
-.abonnements h2::before {
-  content: url(icons/bxs-chevron-down.png);
-}
 .abonnements h2 {
   padding: 10px 0px;
   height: 20px;
-  font-size: 16px;
   display: flex;
   align-items: center;
 }
@@ -192,15 +193,28 @@ aside {
   height: 20px;
   object-fit: cover;
 }
+.abonnements .link {
+  height: 30px;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.link img {
+  height: 20px;
+  width: 20px;
+}
+.link h2 {
+  font-size: 10px;
+}
 
 /*---------------- infos elements ----------------*/
 
 .infos {
-  font-size: 12px;
-  padding: 10px 10px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 /*--------------------- animation toggle ---------------------*/
@@ -211,7 +225,7 @@ aside {
 }
 .sidebar.active .pair .delete,
 .sidebar.active .infos,
-.sidebar.active h2,
+.sidebar.active .link,
 .sidebar.active .abonnements,
 .sidebar.active .for-you .pair:nth-child(3),
 .sidebar.active .for-you .pair:nth-child(4),
@@ -267,6 +281,7 @@ main {
   color: #0f0f0f;
 }
 .navbar ul a {
+  font-size: 10px;
   padding: 5px;
   background: #212121;
   border-radius: 5px;
@@ -293,15 +308,26 @@ main {
 .details {
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
   gap: 2px;
+  padding-top: 5px;
 }
+.contenue-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contenue-text p:nth-child(2),
 .contenue-text p:nth-child(3) {
-  font-size: 10px;
+  color: #aaaaaa;
+  font-size: 12px;
 }
-.details img:nth-child(3) {
+.details > img {
   width: 20px;
   height: 20px;
+}
+.details-right-side {
+  display: flex;
+  gap: 10px;
 }
 .profil-user {
   border-radius: 50%;
@@ -324,6 +350,9 @@ footer {
   .profil-container img:nth-child(1),
   .profil-container img:nth-child(3) {
     display: none;
+  }
+  .search {
+    display: inline;
   }
   #btn {
     display: none;
@@ -352,10 +381,12 @@ footer {
   }
   .details {
     font-size: 16px;
-    justify-content: space-around;
   }
   .vid-card {
     width: 370px;
+  }
+  footer img {
+    cursor: pointer;
   }
   footer {
     border-top: 1px solid #e8e8e8;
@@ -389,10 +420,5 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 5px;
-  }
-}
-@media screen and (max-width: 210px) {
-  .aside {
-    display: none;
   }
 }
